@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Sign In</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript">
+		function logIn() {
+			var username = $("#username").val();
+			window.location.href = "/sign-in?username=" + username;
+		}
+	</script>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	<body>
+		<h1>Sign In to View Quotes!</h1>
+		<input type="text" name="username" id="username">
+		<button onclick="logIn()">Log In</button>
+	</body>
+</html>

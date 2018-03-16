@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>My Quotes</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	<body>
+		<h1>My Quotes</h1>
+		<ol>
+			{% for quote in quotes %}
+			<li>
+				<strong><p>Quote: {{ quote[2] }}</p></strong>
+				<p>Author: {{ quote[3] }}</p>
+			</li>
+			{% endfor %}
+		</ol>
+	</body>
+</html>

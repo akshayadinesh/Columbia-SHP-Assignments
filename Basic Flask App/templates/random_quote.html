@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Random Quote</title>
+		<script type="text/javascript">
+			function saveQuote() {
+				var quoteText = "{{ quote.quoteText }}";
+				var quoteAuthor = "{{ quote.quoteAuthor }}";
+
+				window.location.href = "/save-quote?quote=" + quoteText + "&author=" + quoteAuthor;
+			}
+
+
+		</script>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	</head>
+	<body>
+		<h1>Random Quote</h1>
+		<strong><p>Quote: {{ quote }}</p></strong>
+		<p>Author: {{ quote.quoteAuthor }}</p>
+		<button onclick="saveQuote()">Save to Library</button>
+	</body>
+</html>
